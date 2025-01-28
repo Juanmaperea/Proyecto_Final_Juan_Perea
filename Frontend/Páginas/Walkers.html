@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Metadatos del archivo: -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Proyecto Final - BootCamp">
+        <meta name="author" content="Juan Manuel Perea Coronado">
+        <meta name="keyword" content="li, td, ul, ol, img, font, h1..">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Título de la página: -->
+        <title> Paseadores </title>
+
+        <!-- Importaciones de documentos: -->
+        <link rel="stylesheet" href="/Estilos/Formularios.css">
+        <script type="text/javascript" src="/Acciones/Walkers.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Header con el logo de la aplicación: -->
+        <header>
+            <div class="logo">
+                <a href="/Principal.html">
+                    <img src="/Recursos/Imágenes/Logo.png" alt="WalkyPaws Logo">
+                </a>
+                <h1>WalkyPaws</h1>
+            </div>
+        </header>
+    
+        <!-- Inputs y botones para los formularios: -->
+        <main>
+
+            <!-- Sección izquierda: -->
+            <section class="form-container">
+                <h2>Registrar Paseador:</h2>
+
+                <!-- Formulario Paseador: -->
+                <form id="register_walker">
+                    
+                    <!-- Nombre Paseador: -->
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" min="1" max="100" placeholder="Escriba el nombre del paseador." required>
+        
+                    <!-- Tipo de Documento: -->
+                    <label for="doc_type">Tipo de Documento:</label>
+                    <input type="text" id="doc_type" name="doc_type" min="1" max="3" placeholder="Escriba CC, TI o CE." required>
+        
+                    <!-- Número de Documento: -->
+                    <label for="doc_number">Número:</label>
+                    <input type="text" id="doc_number" name="doc_number" min="1" max="20" placeholder="Escriba el ID del paseador." required>
+        
+                    <!-- Número de Teléfono: -->
+                    <label for="phone">Teléfono Paseador:</label>
+                    <input type="tel" id="phone" name="phone" min="1" max="20" placeholder="Escriba el teléfono del paseador." required>
+        
+                    <!-- Correo Electrónico: -->
+                    <label for="email">Correo Paseador:</label>
+                    <input type="email" id="email" name="email" min="1" max="50" placeholder="Escriba el correo del paseador." required>
+
+                    <!-- Teléfono Empresa: -->
+                    <label for="phone_B">Teléfono Empresa:</label>
+                    <input type="tel" id="phone_B" name="phone_b" min="1" max="50" placeholder="Escriba el teléfono de la empresa." required>
+
+                    <!-- Dirección Empresa: -->
+                    <label for="address_B">Dirección Empresa:</label>
+                    <input type="text" id="address_B" name="address_B" min="1" max="100" placeholder="Escriba la dirección de la empresa."required>
+
+                    <!-- Dirección Paseador: -->
+                    <label for="address">Dirección Paseador:</label>
+                    <input type="text" id="address" name="address" min="1" max="100" placeholder="Escriba la dirección del paseador." required>
+
+                    <!-- Foto Paseador: -->
+                    <!-- <label for="photo">Foto Paseador:</label> -->
+                    <!-- <input type="file" id="photo" name="photo" accept="image/*"> -->
+
+                    <!-- Tarifa Paseador: -->
+                    <label for="fee">Tarifa:</label>
+                    <input type="number" id="fee" name="fee" min="5000" max="100000" placeholder="Escriba la tarifa del paseador." required>
+
+                    <!-- Calificación Paseador: -->
+                    <label for="score">Calificación:</label>
+                    <input type="number" id="score" name="score" min="0" max="10" placeholder="Escriba la calificación del paseador." required>
+
+                    <p> </p>
+        
+                    <!-- Botones: -->
+                    <button type="button" onclick="addWalker()">Registrar</button>
+                    <button type="button" onclick="updateWalker()">Modificar</button>
+                    <button type="reset">Limpiar</button>
+
+                    <p> </p>
+
+                    <h2>Mensajes e Información Extra:</h2>
+
+                    <p> </p>
+
+                    <div id="new_message"> <font color = "red"><b> </b></font> </div>
+
+                </form>
+            </section>
+        
+            <!-- Sección derecha: -->
+            <section>
+                <h2>Información Paseador:</h2>
+
+                <!-- Formulario Consulta Paseador: -->
+                <form id="manage_walker">
+        
+                    <!-- Número de Documento: -->
+                    <label for="search_doc_number">Número de Documento:</label>
+                    <input type="text" id="search_doc_number" name="search_doc_number" placeholder="Escriba el ID del paseador." required>
+        
+                    <!-- Botones: -->
+                    <div class="button-group">
+                        <button type="button" onclick="getWalker()">Consultar</button>
+                        <button type="button" onclick="deleteWalker()">Eliminar</button>
+                    </div>
+
+                </form>
+        
+                <!-- Botón para desplegar paseadores: -->
+                <a href="#set_walkers"><button type="button" onclick="getWalkers()">Ver Paseadores</button></a>
+
+                <p> </p>
+
+                <!-- Tabla: -->
+                <table id=set_walkers>
+                    <!-- Cabeceras: -->
+                    <thead>
+                        <tr>
+                            <th>T. Doc.</th>
+                            <th>N. Doc.</th>
+                            <th>Nombre</th>
+                            <th>Telefono</th>
+                            <th>Correo</th>
+                            <th>Tel. Emp.</th>
+                            <th>Dir. Emp.</th>
+                            <th>Dirección</th>
+                            <th>Tarifa</th>
+                            <th>Calificación</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Cuerpo: -->
+                    <tbody>
+                        <!-- Filas dinámicas -->
+                    </tbody>
+
+                </table>
+            </section>
+        </main>
+
+        <!-- Footer con los derechos de la aplicación: -->
+        <footer>
+            <p>&copy; 2025 WalkyPaws. Todos los derechos reservados.</p>
+        </footer>
+
+    </body>
+</html>

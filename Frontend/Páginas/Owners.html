@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Metadatos del archivo:: -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Proyecto Final - BootCamp">
+        <meta name="author" content="Juan Manuel Perea Coronado">
+        <meta name="keyword" content="li, td, ul, ol, img, font, h1..">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Título de la página: -->
+        <title> Dueños </title>
+
+        <!-- Importaciones de documentos: -->
+        <link rel="stylesheet" href="/Estilos/Formularios.css">
+        <script type="text/javascript" src="/Acciones/Owners.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Header con el logo de la aplicación: -->
+        <header>
+            <div class="logo">
+                <a href="/Principal.html">
+                    <img src="/Recursos/Imágenes/Logo.png" alt="WalkyPaws Logo">
+                </a>
+                <h1>WalkyPaws</h1>
+            </div>
+        </header>
+    
+        <!-- Inputs y botones para los formularios: -->
+        <main>
+
+            <!-- Sección izquierda: -->
+            <section class="form-container">
+                <h2>Registrar Dueño:</h2>
+
+                <!-- Formulario Dueño: -->
+                <form id="register_owner">
+                    
+                    <!-- Identificación Dueño: -->
+                    <label for="doc_number">Número de Identificación:</label>
+                    <input type="text" id="doc_number" name="doc_number" placeholder="Escriba el ID del dueño." required>
+
+                    <!-- Nombre Dueño: -->
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" min="1" max="100" placeholder="Escriba el nombre del dueño."required>
+        
+                    <!-- Número de Teléfono: -->
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Escriba el teléfono del dueño." required>
+        
+                    <!-- Dirección Dueño: -->
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" name="address" min="1" max="50" placeholder="Escriba la dirección del dueño."required>
+
+                    <!-- Correo Electrónico: -->
+                    <label for="email">Correo:</label>
+                    <input type="email" id="email" name="email" min="1" max="50" placeholder="Escriba el correo del dueño." required>
+
+                    <p> </p>
+        
+                    <!-- Botones: -->
+                    <button type="button" onclick="addOwner()">Registrar</button>
+                    <button type="button" onclick="updateOwner()">Modificar</button>
+                    <button type="reset">Limpiar</button>
+
+                    <p> </p>
+
+                    <h2>Mensajes e Información Extra:</h2>
+
+                    <p> </p>
+
+                    <div id="new_message"> <font color = "red"><b> </b></font> </div>
+
+                </form>
+            </section>
+        
+            <!-- Sección derecha: -->
+            <section>
+                <h2>Información Dueño:</h2>
+
+                <!-- Formulario Consulta Dueño: -->
+                <form id="manage_owner">
+        
+                    <!-- Número de Documento: -->
+                    <label for="search_doc_number">Número de Documento:</label>
+                    <input type="text" id="search_doc_number" name="search_doc_number" placeholder="Escriba el ID del dueño." required>
+        
+                    <!-- Botones: -->
+                    <div class="button-group">
+                        <button type="button" onclick="getOwner()">Consultar</button>
+                        <button type="button" onclick="deleteOwner()">Eliminar</button>
+                    </div>
+
+                </form>
+        
+                <!-- Botón para desplegar Dueños: -->
+                <a href="#set_owners"><button type="button" onclick="getOwners()">Ver Dueños</button></a>
+
+                <p> </p>
+
+                <!-- Tabla: -->
+                <table id="set_owners">
+                    <!-- Cabeceras: -->
+                    <thead>
+                        <tr>
+                            <th>Identificación</th>
+                            <th>Nombre</th>
+                            <th>Telefono</th>
+                            <th>Dirección</th>
+                            <th>Correo</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Cuerpo: -->
+                    <tbody>
+                        <!-- Filas dinámicas -->
+                    </tbody>
+
+                </table>
+            </section>
+        </main>
+
+        <!-- Footer con los derechos de la aplicación: -->
+        <footer>
+            <p>&copy; 2025 WalkyPaws. Todos los derechos reservados.</p>
+        </footer>
+
+    </body>
+</html>

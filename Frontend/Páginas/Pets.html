@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Metadatos del archivo:: -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Proyecto Final - BootCamp">
+        <meta name="author" content="Juan Manuel Perea Coronado">
+        <meta name="keyword" content="li, td, ul, ol, img, font, h1..">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Título de la página: -->
+        <title> Mascotas </title>
+
+        <!-- Importaciones de documentos: -->
+        <link rel="stylesheet" href="/Estilos/Formularios.css">
+        <script type="text/javascript" src="/Acciones/Pets.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Header con el logo de la aplicación: -->
+        <header>
+            <div class="logo">
+                <a href="/Principal.html">
+                    <img src="/Recursos/Imágenes/Logo.png" alt="WalkyPaws Logo">
+                </a>
+                <h1>WalkyPaws</h1>
+            </div>
+        </header>
+    
+        <!-- Inputs y botones para los formularios: -->
+        <main>
+
+            <!-- Sección izquierda: -->
+            <section class="form-container">
+                <h2>Registrar Mascota:</h2>
+
+                <!-- Formulario Mascota: -->
+                <form id="register_pet">
+                    
+                    <!-- Identificación Mascota: -->
+                    <label for="doc_number">Número de Identificación:</label>
+                    <input type="text" id="doc_number" name="doc_number" placeholder="Escriba el ID de la mascota." required>
+
+                    <!-- Nombre Mascota: -->
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" min="1" max="100" placeholder="Escriba el nombre de la mascota." required>
+        
+                    <!-- Edad Mascota: -->
+                    <label for="old">Edad:</label>
+                    <input type="number" id="old" name="old" placeholder="Escriba la edad de la mascota." required>
+
+                    <!-- Raza Mascota: -->
+                    <label for="race">Raza:</label>
+                    <input type="text" id="race" name="race" min="1" max="50" placeholder="Escriba la raza de la mascota." required>
+        
+                    <!-- Género Mascota: -->
+                    <label for="genre">Género:</label>
+                    <input type="number" id="genre" name="genre" min="1" max="2" placeholder="Escriba 1 para macho y 2 para hembra." step="1" required>
+        
+                    <!-- Recomendación Mascota: -->
+                    <label for="suggestion">Recomendación:</label>
+                    <input type="text" id="suggestion" name="suggestion" min="1" max="100" placeholder="Escriba alguna recomendación."required>
+
+                    <!-- Identificación Dueño: -->
+                    <label for="idOwner">Identificación Dueño:</label>
+                    <input type="text" id="idOwner" name="idOwner" placeholder="Escriba el ID del dueño." required>
+
+                    <p> </p>
+        
+                    <!-- Botones: -->
+                    <button type="button" onclick="addPet()">Registrar</button>
+                    <button type="button" onclick="updatePet()">Modificar</button>
+                    <button type="reset">Limpiar</button>
+
+                    <p> </p>
+
+                    <h2>Mensajes e Información Extra:</h2>
+
+                    <p> </p>
+
+                    <div id="new_message"> <font color = "red"><b> </b></font> </div>
+
+                </form>
+            </section>
+        
+            <!-- Sección derecha: -->
+            <section>
+                <h2>Información Mascota:</h2>
+
+                <!-- Formulario Consulta Mascota: -->
+                <form id="manage_pet">
+        
+                    <!-- Número de Identificación: -->
+                    <label for="search_doc_number">Número de Identificación:</label>
+                    <input type="text" id="search_doc_number" name="search_doc_number" placeholder="Escriba el ID de la mascota." required>
+        
+                    <!-- Botones: -->
+                    <div class="button-group">
+                        <button type="button" onclick="getPet()">Consultar</button>
+                        <button type="button" onclick="deletePet()">Eliminar</button>
+                        <a href="#new_message"><button type="button" onclick="PetOwner()">Ver Dueño</button></a>
+                    </div>
+
+                </form>
+        
+                <!-- Botón para desplegar mascotas: -->
+                <a href="#set_pets"><button type="button" onclick="getPets()">Ver Mascotas</button></a>
+
+                <p> </p>
+
+                <!-- Tabla: -->
+                <table id="set_pets">
+                    
+                    <!-- Cabeceras: -->
+                    <thead>
+                        <tr>
+                            <th>Identificación</th>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Raza</th>
+                            <th>Género</th>
+                            <th>Recomendaciones</th>
+                            <th>Dueño</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Cuerpo: -->
+                    <tbody>
+                        <!-- Filas dinámicas -->
+                    </tbody>
+
+                </table>
+            </section>
+        </main>
+
+        <!-- Footer con los derechos de la aplicación: -->
+        <footer>
+            <p>&copy; 2025 WalkyPaws. Todos los derechos reservados.</p>
+        </footer>
+
+    </body>
+</html>

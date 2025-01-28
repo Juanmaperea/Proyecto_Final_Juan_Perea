@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Metadatos del archivo:: -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Proyecto Final - BootCamp">
+        <meta name="author" content="Juan Manuel Perea Coronado">
+        <meta name="keyword" content="li, td, ul, ol, img, font, h1..">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Título de la página: -->
+        <title> Paseos </title>
+
+        <!-- Importaciones de documentos: -->
+        <link rel="stylesheet" href="/Estilos/Formularios.css">
+        <script type="text/javascript" src="/Acciones/Paths.js"></script>
+    </head>
+    <body>
+        
+        <!-- Header con el logo de la aplicación: -->
+        <header>
+            <div class="logo">
+                <a href="/Principal.html">
+                    <img src="/Recursos/Imágenes/Logo.png" alt="WalkyPaws Logo">
+                </a>
+                <h1>WalkyPaws</h1>
+            </div>
+        </header>
+    
+        <!-- Tablas, inputs y botones para los formularios: -->
+        <main>
+            
+            <!-- Sección izquierda superior - Tabla de mascotas: -->
+            <section>
+                <h2>Información Mascotas</h2>
+                <table id=set_pets>
+                    <!-- Cabeceras: -->
+                    <thead>
+                        <tr>
+                            <th>Identificación</th>
+                            <th>Nombre</th>
+                            <th>Dueño</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Cuerpo: -->
+                    <tbody>
+                        <!-- Filas dinámicas -->
+                    </tbody>
+                </table>
+            </section>
+    
+            <!-- Sección derecha superior - Tabla de paseadores: -->
+            <section>
+                <h2>Información Paseadores</h2>
+                <table id=set_walkers>
+                    <!-- Cabeceras: -->
+                    <thead>
+                        <tr>
+                            <th>Identificación</th>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Tarifa</th>
+                            <th>Calificación</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Cuerpo: -->
+                    <tbody>
+                        <!-- Filas dinámicas -->
+                    </tbody>
+                </table>
+            </section>
+    
+            <!-- Sección izquierda inferior - Registro de paseos: -->
+            <section class="form-container">
+                <h2>Registrar Paseo</h2>
+
+                <!-- Formulario Paseo: -->
+                <form id="register_path">
+
+                    <!-- Identificación: -->
+                    <label for="doc_number">Identificación:</label>
+                    <input type="text" id="doc_number" name="doc_number" placeholder="Escriba el ID del paseo." required>
+
+                    <!-- Fecha Paseo: -->
+                    <label for="date">Fecha paseo:</label>
+                    <input type="date" id="date" name="date" placeholder="Escriba la fecha del paseo: dd/mm/aaa." required>
+    
+                    <!-- Hora Paseo: -->
+                    <label for="time">Hora paseo:</label>
+                    <input type="time" id="time" name="time" placeholder="Escriba la hora del paseo: hh:mm:am/pm." required>
+    
+                    <!-- Duración Paseo: -->
+                    <label for="long">Duración paseo:</label>
+                    <input type="number" id="long" name="long" placeholder="Escriba la duración del paseo en horas." required>
+    
+                    <!-- Mascota Paseo: -->
+                    <label for="idPet">Identificación mascota:</label>
+                    <input type="text" id="idPet" name="idPet" placeholder="Escriba el ID de la mascota a pasear." required>
+
+                    <!-- Paseador Paseo: -->
+                    <label for="idWalker">Identificación paseador:</label>
+                    <input type="text" id="idWalker" name="idWalker" placeholder="Escriba el ID del paseador." required>
+
+                    <!-- Novedades Paseo: -->
+                    <label for="news">Novedades paseo:</label>
+                    <input type="text" id="news" name="news" min="1" max="250" placeholder="Escriba las novedades del paseo." required>
+
+                    <!-- Botones: -->
+                    <div class="button-group">
+                        <button type="button" onclick="addPath()">Registrar</button>
+                        <button type="button" onclick="updatePath()">Modificar</button>
+                        <button type="reset">Limpiar</button>
+                    </div>
+
+                    <p> </p>
+
+                    <h2>Mensajes e Información Extra:</h2>
+
+                    <p> </p>
+
+                    <div id="new_message"> <font color = "red"><b> </b></font> </div>
+
+                </form>
+            </section>
+    
+            <!-- Sección derecha inferior - Información de paseos: -->
+            <section>
+                <h2>Información Paseo</h2>
+
+                <!-- Formulario Consulta Paseo: -->
+                <form id="manage_path">
+
+                    <!-- Número de Identificación: -->
+                    <label for="search_doc_number">Paseo:</label>
+                    <input type="text" id="search_doc_number" name="search_doc_number" placeholder="Escriba el ID del paseo.">
+    
+                    <!-- Botones: -->
+                    <div class="button-group">
+                        <button type="button" onclick="getPath()">Consultar</button>
+                        <button type="button" onclick="deletePath()">Eliminar</button>
+                        <a href="#new_message"><button type="button" onclick="PathPet()">Ver Mascota</button></a>
+                        <a href="#new_message"><button type="button" onclick="PathWalker()">Ver Paseador</button></a>
+                    </div>
+                </form>
+    
+                <!-- Botón para desplegar paseadores: -->
+                <a href="#set_paths"><button type="button" onclick="getPaths()">Ver Paseos</button></a>
+
+                <p> </p>
+
+                <table id=set_paths>
+                    <!-- Cabeceras: -->
+                    <thead>
+                        <tr>
+                            <th>Identificación</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Duración</th>
+                            <th>Mascota</th>
+                            <th>Paseador</th>
+                            <th>Novedades</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Cuerpo: -->
+                    <tbody>
+                        <!-- Filas dinámicas -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    
+        <!-- Footer con los derechos de la aplicación: -->
+        <footer>
+            <p>&copy; 2025 WalkyPaws. Todos los derechos reservados.</p>
+        </footer>
+
+    </body>
+</html>

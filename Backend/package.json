@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend para el desarrollo del proyecto final.",
+  "keywords": [
+    "Proyecto",
+    "Final"
+  ],
+  "license": "ISC",
+  "author": "Juan Perea",
+  "type": "commonjs",
+  "main": "Index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Index"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "bootstrap-icons": "^1.11.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  }
+}
