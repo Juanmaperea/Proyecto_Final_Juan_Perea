@@ -1,0 +1,24 @@
+[{
+  "_id": "1",
+  "Nombre": "Juan Perea",
+  "Telefono": 3158963878787788,
+  "Direccion": "Calle 5 #4 - 38",
+  "Correo": "juan.perea@hotmail.com",
+  "__v": 0
+},
+{
+  "_id": "2",
+  "Nombre": "Martha Cardona",
+  "Telefono": 4268596,
+  "Direccion": "Calle 8 #4 - 35",
+  "Correo": "cardona.martha@gmail.com",
+  "__v": 0
+},
+{
+  "_id": "3",
+  "Nombre": "Laura Villa",
+  "Telefono": 3135896644,
+  "Direccion": "Calle 54 #2 - 33",
+  "Correo": "laura.villa@yahoo.com",
+  "__v": 0
+}]

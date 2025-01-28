@@ -1,0 +1,30 @@
+[{
+  "_id": "1",
+  "Fecha": "2024-02-11",
+  "Hora": "08:00",
+  "Duracion": 2,
+  "Mascota": "1",
+  "Paseador": "1",
+  "Novedades": "Sin novedad.",
+  "__v": 0
+},
+{
+  "_id": "2",
+  "Fecha": "2025-01-27",
+  "Hora": "10:00",
+  "Duracion": 1,
+  "Mascota": "2",
+  "Paseador": "2",
+  "Novedades": "Se mostró muy ansioso.",
+  "__v": 0
+},
+{
+  "_id": "3",
+  "Fecha": "2025-05-04",
+  "Hora": "13:00",
+  "Duracion": 1,
+  "Mascota": "3",
+  "Paseador": "3",
+  "Novedades": "Pendiente por realizar.",
+  "__v": 0
+}]

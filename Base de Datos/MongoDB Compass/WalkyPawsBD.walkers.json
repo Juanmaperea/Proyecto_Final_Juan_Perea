@@ -1,0 +1,39 @@
+[{
+  "_id": "1",
+  "Documento": "CC",
+  "Nombre": "Carlos Lopez",
+  "Telefono": "4123658",
+  "Correo": "carlos.lopez@example.com",
+  "Telefono2": "3108527365",
+  "Direccion2": "Carrera 15 #20 - 20",
+  "Direccion": "Carrera 15 #20 - 11",
+  "Tarifa": 5000,
+  "Calificacion": 5,
+  "__v": 0
+},
+{
+  "_id": "2",
+  "Documento": "CC",
+  "Nombre": "Ricardo Vargas",
+  "Telefono": "4859765",
+  "Correo": "ricardo.vargas@yahoo.es",
+  "Telefono2": "3158741213",
+  "Direccion2": "Calle 8 #4 - 7",
+  "Direccion": "Carrera 3 #4b - 57",
+  "Tarifa": 7000,
+  "Calificacion": 8,
+  "__v": 0
+},
+{
+  "_id": "3",
+  "Documento": "TI",
+  "Nombre": "Maria Gonzalez",
+  "Telefono": "3187569899",
+  "Correo": "maria.gonzalez@hotmail.com",
+  "Telefono2": "3217852369",
+  "Direccion2": "Avenida 5 #2 - 201",
+  "Direccion": "Avenida 5 #2 - 201",
+  "Tarifa": 10000,
+  "Calificacion": 10,
+  "__v": 0
+}]

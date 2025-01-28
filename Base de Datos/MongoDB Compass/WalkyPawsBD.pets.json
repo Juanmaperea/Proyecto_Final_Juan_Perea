@@ -1,0 +1,40 @@
+[{
+  "_id": "1",
+  "Nombre": "Maya",
+  "Edad": 11,
+  "Raza": "Pinscher",
+  "Genero": 2,
+  "Recomendaciones": "Es muy mimada. Muerde cuando se estresa.",
+  "Dueno": "1",
+  "__v": 0
+},
+{
+  "_id": "2",
+  "Nombre": "Max",
+  "Edad": 7,
+  "Raza": "Labrador",
+  "Genero": 1,
+  "Recomendaciones": "Le encanta correr. Necesita espacio al aire libre.",
+  "Dueno": "2",
+  "__v": 0
+},
+{
+  "_id": "3",
+  "Nombre": "Molly",
+  "Edad": 5,
+  "Raza": "Poodle",
+  "Genero": 2,
+  "Recomendaciones": "Es muy juguetona. Requiere mucha atención.",
+  "Dueno": "3",
+  "__v": 0
+},
+{
+  "_id": "4",
+  "Nombre": "Juice",
+  "Edad": 8,
+  "Raza": "French Poodle",
+  "Genero": 2,
+  "Recomendaciones": "Muy chiquita.",
+  "Dueno": "1",
+  "__v": 0
+}]
